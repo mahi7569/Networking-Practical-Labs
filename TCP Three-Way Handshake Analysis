@@ -1,0 +1,68 @@
+TCP Three-Way Handshake Analysis Using Wireshark
+
+1. Objective
+
+To capture and analyse TCP packets in Wireshark and understand how a TCP connection is established between a client and a server.
+
+2. Tools Used
+
+  >. Wireshark
+
+  >. TCP/IP networking
+
+  >. Web browser or another TCP-based application
+
+3. Concept
+
+     TCP uses a three-way handshake to establish a connection before exchanging application data.
+
+   Step 1: SYN
+
+         The client sends a SYN packet to request a TCP connection with the server.
+
+   Step 2: SYN-ACK
+
+         The server responds with a SYN-ACK packet, acknowledging the client's request and sending its own SYN.
+
+   Step 3: ACK
+
+         The client sends an ACK packet to acknowledge the server's response. The TCP connection is now established.
+
+4. Procedure
+
+     1. Open Wireshark and select the active network interface.
+
+     2. Start capturing packets.
+
+     3. Generate TCP traffic by opening a website or connecting to a TCP service.
+
+     4. Stop the capture after the connection is established.
+
+     5. Apply a TCP display filter, such as tcp.
+
+     6. Identify the SYN, SYN-ACK, and final ACK packets.
+
+5. Expected Packet Sequence
+
+         Packet           Direction           TCP Flags
+
+          1            Client → Server           SYN
+          2            Server → Client         SYN, ACK
+          3            Client → Server            ACK
+
+
+6. Observations
+
+     Record the actual source and destination IP addresses, port numbers, and TCP flags from your capture.
+
+7. Result
+
+     The TCP three-way handshake was analysed using Wireshark to understand how a reliable TCP connection is established.
+
+8. Key Learnings
+
+    1. Understood the purpose of the TCP three-way handshake.
+
+    2. Identified SYN, SYN-ACK, and ACK flags.
+
+    3. Practised packet capture and TCP packet analysis.
